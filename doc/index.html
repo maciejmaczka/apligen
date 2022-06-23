@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
+	<meta name="Description" content="Apligen - Advanced Password List Generator" />
+	<meta name="Keywords" content="Apligen Advanced Password List Generator Crack" />
+	<meta http-equiv="Content-Language" content="pl" />
+   <meta name="Robots" content="all" />
+	<title>Advanced Password List Generator </title>
+</head>
+<body>
+
+<center>
+<h1> Advanced Password List Generator </h1>
+<img src="apligen.jpg" width="245" height="223" alt="" />
+</center>
+<br />
+<h3> Overview </h3> 
+<p> Apligen generates list of password for password crackers. It can be use for brute force attack or direct attack (when you know password profile, 
+you have seen somebody typing password or else).  </p>
+
+<h3>Features</h3>
+<p>
+- Defined characters set - you don't have to type in all alphabet <br /> 
+- Manipulate characters set - you can add extra characters for all positions or just one <br />
+- Define minimum and maximum password length - you do not have to start from one letter password <br />
+- Many output - you can split the list into many files (using nfs or smb and then break password parallel with many computers) <br />
+- Simple progress indicator <br />
+- Three generating loops - fast (simple), medium , slow (most complicated) <br />
+- Concat - Add constant string at end or beginning of password <br />
+- Invert order - Characters order will be inverted (first password will be zzz and last aaa, by default is aaa -> zzz) <br />
+- Invert write - Last position is changing - aaa -> aab, by default aaa -> baa <br />
+- Randomize - Characters order will be randomized (for each position separately) <br />
+- Mask - match password to the mask <br />
+- Row - skip  aaaaa like password<br />
+- Complex - password must have number, upper and lower case letters and special characters <br />
+- Can not contain - string can't be appart of password <br />
+- Each character can be used only once <br />
+- Convert to hex <br />
+- Parallel Independent Processing <br />
+- Regex - Match password to Reges Expr <br />
+- Stop - Stop after generating x passwords <br />
+- Strong Password List - Generate list of random passwords <br /> 
+
+</p>
+
+<h3> Dowload </h3>
+You can download latest version <a href="http://sourceforge.net/projects/apligen/files/">here</a>
+
+<h3>Using </h3>
+<p>
+<b> Minimum and maximum password length </b> - This positions are mandatory. They indicate length of the password. 
+If min = 1 and max = 3 first generated will be one letter password 
+then two letters and thre. If you set min = 2 one letter password will no be generated. If you know 
+exactly password length use min = X and max = X" <br /><br />
+
+
+<b> Used characters </b> - You must specify which characters will be used. You can do that in following ways: <br />
+1. Use predefined characters set by <br />
+&nbsp;&nbsp;&nbsp;-n     - numbers <br />
+&nbsp;&nbsp;&nbsp;-l     - lower case letters <br />
+&nbsp;&nbsp;&nbsp;-u     - upper case letters <br />
+&nbsp;&nbsp;&nbsp;-s     - special characters <br /><br />
+2. Use your own set by -g option <br />
+&nbsp;&nbsp;&nbsp;-g qwertasdzxc123 <br /><br />
+3. Use your own set for each position by -A option <br />
+&nbsp;&nbsp;&nbsp;-p qweasd%1234%0po9i8%123 <br />
+&nbsp;&nbsp;&nbsp;% seperates posiions <br />
+&nbsp;&nbsp;&nbsp;Created set will by as follow<br />
+&nbsp;&nbsp;&nbsp;1. qwersd <br />
+&nbsp;&nbsp;&nbsp;2. 1234 <br/>
+&nbsp;&nbsp;&nbsp;3. 0po9i8 <br/>
+&nbsp;&nbsp;&nbsp;4. 1234 <br/><br />
+If one position do not requaire additional characters use - <br/>
+&nbsp;&nbsp;&nbsp;-p qweasd%1234%-%123 <br/>
+&nbsp;&nbsp;&nbsp;Created set will by as follow<br/>
+&nbsp;&nbsp;&nbsp;1. qwersd <br/>
+&nbsp;&nbsp;&nbsp;2. 1234 <br/>
+&nbsp;&nbsp;&nbsp;3.      <br/>
+&nbsp;&nbsp;&nbsp;4. 1234 <br/><br />
+If you want to use % or - in your set use -1 for - and -2 for %  <br/>
+&nbsp;&nbsp;&nbsp;-p qwe%-1%-2%123 <br/>
+&nbsp;&nbsp;&nbsp;Created set will by as follow<br/>
+&nbsp;&nbsp;&nbsp;1. qwe <br/>
+&nbsp;&nbsp;&nbsp;2. - <br/>
+&nbsp;&nbsp;&nbsp;3. % <br/>
+&nbsp;&nbsp;&nbsp;4. 123 <br/><br />
+WARNING: Each position must have at least one character<br/>
+WARNING: Number of sets can't be larger than maximum password length <br/><br />
+4. Mixed <br/>
+&nbsp;&nbsp;&nbsp;-n  -g qwe -p Q%W%E <br/>
+&nbsp;&nbsp;&nbsp;Created set will by as follow<br/>
+&nbsp;&nbsp;&nbsp;1. 1234567890qweQ <br/>
+&nbsp;&nbsp;&nbsp;2. 1234567890qweW- <br/>
+&nbsp;&nbsp;&nbsp;3. 1234567890qweE <br/>
+&nbsp;&nbsp;&nbsp;4. 1234567890qwe <br/><br />
+If one position do not requaire additional characters use - <br/>
+&nbsp;&nbsp;&nbsp;-n -p qw%er%-%ty <br/>
+&nbsp;&nbsp;&nbsp;Created set will by as follow<br/>
+&nbsp;&nbsp;&nbsp;1. 1234567890qw <br/>
+&nbsp;&nbsp;&nbsp;2. 1234567890er <br/>
+&nbsp;&nbsp;&nbsp;3. 1234567890   <br/>
+&nbsp;&nbsp;&nbsp;4. 1234567890ty <br/>  <br/>
+Read characters from file <br/>
+&nbsp;&nbsp;&nbsp;-c char.txt <br/>
+&nbsp;&nbsp;&nbsp;File must have one set per line<br/>
+&nbsp;&nbsp;&nbsp;1. 1234567890qw <br/>
+&nbsp;&nbsp;&nbsp;2. 1234567890er <br/>
+&nbsp;&nbsp;&nbsp;3. 1234567890   <br/>
+&nbsp;&nbsp;&nbsp;4. 1234567890ty <br/>  <br/>
+
+<b> Output file </b> - You can specify output in following ways: <br/>
+1. One file by -o option <br/>
+&nbsp;&nbsp;&nbsp; -o path <br/><br />
+2. Many files in one folder <br/>
+&nbsp;&nbsp;&nbsp; -o path -e 4 <br/>
+&nbsp;&nbsp;&nbsp;This will create files path0, path1, path2 path3 and output will be splitted \
+into 4 parts <br/><br />
+3. Read from file by - F option <br/>
+&nbsp;&nbsp;&nbsp;-f path  <br/>
+&nbsp;&nbsp;&nbsp;File mus contains destination file paths, one path per line <br/><br />
+4. Input seperated by % <br/>
+&nbsp;&nbsp;&nbsp;-w path1%path2%path3 <br/><br />
+5. Mixed - use all methods together <br /><br />
+
+<b>Advanced options </b> - All following options can be used together. <br/>
+1. Default generation <br/>
+&nbsp;&nbsp;&nbsp;aaa <br/>
+&nbsp;&nbsp;&nbsp;baa <br/>
+&nbsp;&nbsp;&nbsp;caa <br/>
+&nbsp;&nbsp;&nbsp;... <br/>
+&nbsp;&nbsp;&nbsp;zzz <br/><br />
+2. Reverse order set -I <br/>
+&nbsp;&nbsp;&nbsp;zzz <br/>
+&nbsp;&nbsp;&nbsp;xzz <br/>
+&nbsp;&nbsp;&nbsp;yzz <br/>
+&nbsp;&nbsp;&nbsp;... <br/>
+&nbsp;&nbsp;&nbsp;aaa <br/><br />
+3. Reverse output -D <br/>
+&nbsp;&nbsp;&nbsp;aaa <br/>
+&nbsp;&nbsp;&nbsp;aab <br/>
+&nbsp;&nbsp;&nbsp;aac <br/>
+&nbsp;&nbsp;&nbsp;... <br/>
+&nbsp;&nbsp;&nbsp;zzz <br/><br />
+4. Concat at beginning -B qwe <br/>
+&nbsp;&nbsp;&nbsp;qweaaa <br/>
+&nbsp;&nbsp;&nbsp;qweaab <br/>
+&nbsp;&nbsp;&nbsp;qweaac <br/>
+&nbsp;&nbsp;&nbsp;...... <br/>
+&nbsp;&nbsp;&nbsp;qwezzz <br/><br />
+5. Concat at end -E qwe<br/>
+&nbsp;&nbsp;&nbsp;aaaqwe <br/>
+&nbsp;&nbsp;&nbsp;baaqwe <br/>
+&nbsp;&nbsp;&nbsp;caaqwe <br/>
+&nbsp;&nbsp;&nbsp;...... <br/>
+&nbsp;&nbsp;&nbsp;zzzqwe<br/><br />
+4. Randomized -R <br />
+&nbsp;&nbsp;&nbsp;who <br/>
+&nbsp;&nbsp;&nbsp;hap <br/>
+&nbsp;&nbsp;&nbsp;zwc <br/>
+&nbsp;&nbsp;&nbsp;... <br/>
+&nbsp;&nbsp;&nbsp;Characters order is randomized for each position seperatly <br /><br />
+
+
+<b>Rules </b> - Skipping some passwords  <br/>
+1. Letters in row - password that have number or more the same characters in row will be skipped -W number <br />
+2. Store filtered passwords in file - d file <br />
+3. Mask - match password to the mask -K string <br />
+<br />
+For mask %1%2%2%1 password list will be as follow:<br />
+&nbsp;&nbsp;&nbsp;0110<br />
+&nbsp;&nbsp;&nbsp;2112<br />
+&nbsp;&nbsp;&nbsp;3113<br />
+&nbsp;&nbsp;&nbsp;....<br /><br />
+4. String can't be appart of password -C qwe <br />
+5. Minimum numbers in password -N number <br />
+6. Minimum lower case letters in password -L number <br />
+7. Minimum upper case letters in password -U number <br />
+8. Minimum special characters in passowrd -S number <br />
+9. AD complexity - password must have at lest 3 characters types <br />
+10. Character can be used only once <br />
+11. Regex - Match password to regex expr <br/> 
+12. Generate only x passowrds <br/>
+13. Generate strong random passwords <br />
+14. Parallel processing (use many cores or computers to speed up process)<br />
+&nbsp;&nbsp;&nbsp;(PIM-1) apligen -m 6 -x 6 -n -o output1.txt -P 1/4<br />
+&nbsp;&nbsp;&nbsp;(PIM-2) apligen -m 6 -x 6 -n -o output2.txt -P 2/4<br />
+&nbsp;&nbsp;&nbsp;(PIM-3) apligen -m 6 -x 6 -n -o output3.txt -P 3/4<br />
+&nbsp;&nbsp;&nbsp;(PIM-4) apligen -m 6 -x 6 -n -o output4.txt -P 4/4<br />
+
+ <br />
+<b>Examples </b><br />
+aplieng -m 3 -x 3 -n -f output.txt<br />
+apligen -m 1 -x 5 -n - g abcd -F path_file.txt -w 3<br />
+apligen -m 1 -x 3 -l -f path.txt -e 4 -R -I<br /> 
+apligen -m 4 -x 4 -nls -o path.txt -K 1%2%2%1<br />
+<br />
+<h3>Licence</h3>
+GPL
+
+<h3> Contact </h3>
+Maciej mac Maczka <br />
+maciej  (dot) maczka (-@-) gmail (dot) com <br />
+
+
+</p>
+</body>
+</html>
